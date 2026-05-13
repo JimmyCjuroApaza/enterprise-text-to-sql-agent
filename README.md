@@ -2,6 +2,8 @@
 
 Un Agente de Inteligencia Artificial 100% local diseñado para el sector corporativo, capaz de traducir preguntas de negocio en lenguaje natural a consultas SQL complejas, ejecutarlas y visualizar los resultados sin exponer datos confidenciales a la nube.
 
+![Agente en funcionamiento](img/demo1.png)
+
 ## 📌 El Problema de Negocio (Soberanía de Datos)
 Las gerencias necesitan respuestas rápidas a partir de sus bases de datos transaccionales (Ej. "Top clientes por ingresos", "Análisis de morosidad"). Sin embargo, instituciones financieras y corporaciones no pueden enviar sus esquemas de bases de datos ni datos de clientes a APIs públicas (como OpenAI) por estrictas normativas de seguridad y privacidad (Compliance).
 
@@ -13,6 +15,8 @@ Este proyecto implementa una arquitectura **RAG (Retrieval-Augmented Generation)
 * **Inferencia Dinámica del Esquema:** El agente hace un barrido de `information_schema` en tiempo real. Si se agrega una nueva tabla a la base de datos, la IA la reconoce automáticamente sin reentrenar el modelo.
 * **Manejo de Lógica Compleja:** Capaz de resolver consultas de Nivel 3 y 4, incluyendo múltiples `INNER/LEFT JOINs`, agregaciones (`SUM`, `COUNT`) y filtrado por ausencia de datos (`IS NULL`).
 * **UI/UX Corporativa:** Interfaz gráfica desarrollada para usuarios de negocio (no técnicos) que muestra la consulta generada para auditoría y renderiza los resultados en DataFrames interactivos.
+
+![Interfaz Detallada](img/demo2.png)
 
 ## 🛠️ Stack Tecnológico
 * **Motor de Base de Datos:** PostgreSQL (Desplegado en entorno Linux/Ubuntu).
